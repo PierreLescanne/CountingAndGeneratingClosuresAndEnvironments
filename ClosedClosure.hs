@@ -41,6 +41,7 @@ ratios = [(fromIntegral$ allCl !! (n+1)) /(fromIntegral$ allCl !! n)| n<-[0..]]
 -- That is [{},{},{λ0<>},{λλ0<>,0<λ0<>>}
 --          {λλλ0<>,λλS0<>,λ(00)<>,λ0<λ0<>>,0<λλ0<>>,0<0,λ0>>}
 
+
 --- Local Variables:
 --- mode: haskell
 --- mode: haskell-indentation
