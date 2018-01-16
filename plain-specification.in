@@ -1,0 +1,26 @@
+-- Combinatorial specification for
+-- plain closures and environments.
+
+@module    Sampler
+@precision 1.0e-12
+@maxiter   30
+
+@withIO    y
+@withLists n
+@withShow  y
+
+-- environments
+Env = Cons Closure Env (0)
+    | Empty (0).
+
+-- closures
+Closure = Couple Term Env (0).
+
+-- lambda terms
+Term = Index Nat (0)
+     | Abs Term
+     | App Term Term.
+
+-- de Bruijn indices
+Nat = Z
+    | S Nat.
